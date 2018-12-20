@@ -1,0 +1,20 @@
+[core]
+	excludesfile = /Users/allar-alexeyalexandrovich/.gitignore_global
+	attributesfile = /Users/allar-alexeyalexandrovich/.gitattributes
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /private/var/folders/bs/1xs3np5s7z98c638dyjr_zmh0000gn/T/AppTranslocation/80678723-152B-4A94-9A56-E3F57A28AA24/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Allar-Alexey Alexandrovich
+	email = allar5430@gmail.com
+[commit]
+	template = /Users/allar-alexeyalexandrovich/.stCommitMsg
+[filter "clean_ipynb"]
+	clean = ipynb_drop_output
+	smudge = cat
+[filter "dropoutput_ipynb"]
+	clean = ipython
+	smudge = cat
