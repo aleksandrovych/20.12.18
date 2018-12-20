@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -37,40 +37,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized-image-measurer/lib/index.js">
+        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/es/CellMeasurer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2835">
-              <caret line="190" column="16" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="16" />
+            <state relative-caret-position="45">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding>
-                <element signature="e#0#85#0" expanded="true" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/es/Masonry/index.js">
+        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/es/CellMeasurer/CellMeasurer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="457">
+              <caret line="165" column="10" selection-start-line="165" selection-start-column="2" selection-end-line="165" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/es/Masonry/Masonry.js">
+        <entry file="file://$PROJECT_DIR$/moveirstore/src/SearchFlow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="436" column="25" selection-start-line="436" selection-start-column="16" selection-end-line="436" selection-end-column="25" />
+            <state relative-caret-position="434">
+              <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/src/data.js">
+        <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="73" column="22" lean-forward="true" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+            <state relative-caret-position="430">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,27 +103,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/src/logo.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/src/App.test.js">
+        <entry file="file://$PROJECT_DIR$/moveirstore/src/ControledPagination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/src/ControledPagination.js">
+        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/semantic-ui-react/dist/commonjs/collections/Grid/Grid.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="394">
+              <caret line="51" column="49" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/semantic-ui-react/dist/commonjs/addons/Pagination/Pagination.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -146,6 +153,7 @@
       <find>width</find>
       <find>defaultP</find>
       <find>MasonryComponent</find>
+      <find>bottomOffset</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/commonjs</dir>
@@ -160,13 +168,14 @@
         <option value="$PROJECT_DIR$/moveirstore/src/index.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/SearchFlow.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/App.js" />
-        <option value="$PROJECT_DIR$/moveirstore/src/ControledPagination.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/index.css" />
         <option value="$PROJECT_DIR$/moveirstore/src/App.css" />
         <option value="$PROJECT_DIR$/moveirstore/src/MasonryComponent.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/Masonry.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/MenuFlow.js" />
         <option value="$PROJECT_DIR$/moveirstore/data.js" />
+        <option value="$PROJECT_DIR$/moveirstore/src/data.js" />
+        <option value="$PROJECT_DIR$/moveirstore/src/ControledPagination.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/MasonryProvider.js" />
       </list>
     </option>
@@ -241,12 +250,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545314075564</updated>
-      <workItem from="1545314077674" duration="15477000" />
+      <workItem from="1545314077674" duration="17191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15477000" />
+    <option name="totallyTimeSpent" value="17191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="779" extended-state="0" />
@@ -511,26 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/SearchFlow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/moveirstore/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -565,17 +554,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/ControledPagination.js">
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized-image-measurer/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="2835">
+          <caret line="190" column="16" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moveirstore/src/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="73" column="22" lean-forward="true" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+        <state relative-caret-position="607">
+          <caret line="1032" column="6" selection-start-line="1032" selection-start-column="6" selection-end-line="1032" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -596,23 +591,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/logo.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized-image-measurer/lib/index.js">
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/SearchFlow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="190" column="16" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="16" />
+        <state relative-caret-position="434">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
           <folding>
-            <element signature="e#0#85#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/semantic-ui-react/dist/commonjs/addons/Pagination/Pagination.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/semantic-ui-react/dist/commonjs/collections/Grid/Grid.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/ControledPagination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/es/CellMeasurer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/es/CellMeasurer/CellMeasurer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="165" column="10" selection-start-line="165" selection-start-column="2" selection-end-line="165" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
