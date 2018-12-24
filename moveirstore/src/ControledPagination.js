@@ -10,17 +10,18 @@ export default class PaginationControlled extends Component {
 
     render() {
         const {activePage} = this.state
+        const p = this.props;
 
         return (
             < Grid padded='vertically'
         columns = {3}
-        verticalAlign = 'middle' >
+        verticalAlign = 'middle'>
             < Grid.Column />
         < Grid.Column >
         < Pagination
-        activePage = {activePage}
-        onPageChange = {this.handlePaginationChange}
-        totalPages = {5}
+        activePage = {p.activePage}
+        onPageChange = {p.onPageChange}
+        totalPages = {p.totalPages}
         />
         < /Grid.Column>
         < Grid.Column />

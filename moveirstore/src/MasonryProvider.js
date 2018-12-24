@@ -13,7 +13,7 @@ import list from "./data";
 //const list = [{image: 'http://...', title: 'Foo'}];
 
 // We need to make sure images are loaded from scratch every time for this demo
-const noCacheList = list.map((item, index) => ({
+const noCacheList = list => list.map((item, index) => ({
     title: index + ". " + item.title,
     image: item.image + (item.image ? "?noCache=" + Math.random() : "")
 }));
@@ -88,7 +88,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
 };
 
 class Index extends React.Component {
-    state = { images: noCacheList };
+    state = { images: noCacheList(this.props.list) };
 
     masonryRef = null;
 
