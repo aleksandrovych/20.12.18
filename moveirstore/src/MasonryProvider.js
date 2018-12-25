@@ -7,7 +7,6 @@ import {
     Masonry
 } from "react-virtualized";
 import ImageMeasurer from "react-virtualized-image-measurer";
-import list from "./data";
 
 // Array of images with captions
 //const list = [{image: 'http://...', title: 'Foo'}];
@@ -56,10 +55,10 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                 parent={parent} >
             <div style={{...style, ...{border: "2px double grey"}}}>
             <div>{item.title}</div>
-        {item.image && (
+        {(
         <img
-            src={item.image}
-            alt={item.title}
+            src={(console.log('https://image.tmdb.org/t/p/w500'+item.poster), 'https://image.tmdb.org/t/p/w500'+item.poster)}
+            alt={'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
             style={{
             height: height,
                 width: columnWidth,
@@ -88,7 +87,21 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
 };
 
 class Index extends React.Component {
-    state = { images: noCacheList(this.props.list) };
+
+    constructor(props) {
+        super(props)
+
+        this.state = { images: noCacheList(this.props.list)};
+    }
+
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.list != prevState.images) {
+            return {...prevState, images: nextProps.list}
+        }
+
+        return null;
+    }
 
     masonryRef = null;
 

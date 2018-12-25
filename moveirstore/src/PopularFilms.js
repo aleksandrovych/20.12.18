@@ -15,19 +15,20 @@ class PopularFilms extends Component {
         getPopularMovies(pageNumber);
     }
 
-    componentDidMount(){
-
+    componentDidMount() {
         let { getPopularMovies, activePagePopular } = this.props
         getPopularMovies(activePagePopular);
     }
 
     render() {
-        console.dir({totalMovies: totalMovies})
         let {moviesAreLoading, movies, totalMovies, activePagePopular} = this.props
+
+        const reducer = function(a, b) { return a.concat(b);}
+        const parsed = movies.reduce(reducer, []);
         let pagination = {activePage: activePagePopular, onPageChange: this.onPageChange, totalPages: Math.floor(totalMovies / 20)}
         return [
-            < ImageMeasurer list={movies} / >,
-            < PaginationControlled {...pagination} / >
+            < ImageMeasurer key="ImageMeasurer" list={parsed} / >,
+            < PaginationControlled key="PaginationControlled" {...pagination} / >
         ]
     }
 }
