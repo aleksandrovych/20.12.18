@@ -47,16 +47,15 @@ class MenuAttached extends React.Component {
             < /Menu>
 
             < Segment
-        key = 'seg'
-        attached = 'bottom' >
-            < div
-        id = "minContent"
-        className = "minContent" >
-
-            <PopularFilms/>
-            < /div>
+                key = 'seg'
+                attached = 'bottom' >
+                < div
+                    id = "minContent"
+                    className = "minContent" >
+                    <PopularFilms/>
+                < /div>
             < /Segment>
-            < /div>
+                    < /div>
     )
     }
 }

@@ -53,20 +53,20 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                 index={index}
                 key={key}
                 parent={parent} >
-            <div style={{...style, ...{border: "2px double grey"}}}>
-            <div>{item.title}</div>
+            <div style={{...style, ...{border: "2px double grey", paddingLeft: "1px", }}}>
         {(
         <img
             src={(console.log('https://image.tmdb.org/t/p/w500'+item.poster), 'https://image.tmdb.org/t/p/w500'+item.poster)}
             alt={'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
             style={{
             height: height,
-                width: columnWidth,
-                objectFit: "contain",
+                width: columnWidth - 5,
+                objectFit: "fill",
                 display: "block"
         }}
             />
         )}
+                <div>{item.title}</div>
     </div>
         </CellMeasurer>
     );
