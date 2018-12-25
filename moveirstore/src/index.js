@@ -3,9 +3,7 @@ import { AppContainer } from 'react-hot-loader'
 import './semantic/dist/semantic.min.css';
 import './index.css';
 import App from './App';
-
 import { Provider } from 'react-redux'
-
 import { applyMiddleware, compose, createStore } from 'redux'
 import { createBrowserHistory } from 'history'
 import { routerMiddleware } from 'connected-react-router'
@@ -31,7 +29,7 @@ const render = () => {
                 <App history={history} />
             </Provider>
         </AppContainer>,
-        document.getElementById('react-root')
+        document.getElementById('root')
     )
 }
 
