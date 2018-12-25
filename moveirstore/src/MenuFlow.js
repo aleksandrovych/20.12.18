@@ -23,8 +23,7 @@ class MenuAttached extends React.Component {
         < Dropdown.Menu >
 
         < Dropdown.Item > Latest < /Dropdown.Item>
-        < Dropdown.Item > Popular <
-        /Dropdown.Item>
+        < Dropdown.Item > Popular < /Dropdown.Item>
         < Dropdown.Item > Watchlist < /Dropdown.Item>
 
         < /Dropdown.Menu>
@@ -60,6 +59,7 @@ class MenuAttached extends React.Component {
     )
     }
 }
+
 
 const mapStateToProps = (state) => {
     return {

@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import './App.css';
-import MenuAttached from './MenuFlow';
+import { ConnectedRouter } from 'connected-react-router'
+import routes from './routes';
 
-import {
-    Search,
-    Container,
-} from 'semantic-ui-react';
-
-class App extends Component {
-  render() {
+const App = ({ history }) => {
     return (
-        <Container>
-        <MenuAttached/>
-        </Container>
-    );
-  }
+        <ConnectedRouter history={history}>
+            { routes }
+        </ConnectedRouter>
+    )
 }
 
-export default App;
+App.propTypes = {
+    history: PropTypes.object,
+}
+
+export default App
