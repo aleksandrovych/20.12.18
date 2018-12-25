@@ -7,8 +7,7 @@ import {
     Masonry
 } from "react-virtualized";
 import ImageMeasurer from "react-virtualized-image-measurer";
-//import {Grid} from "./PopularFilms";
-import {Grid} from 'semantic-ui-react'
+import {Grid, Label, Icon, Container, Progress} from 'semantic-ui-react'
 
 // Array of images with captions
 //const list = [{image: 'http://...', title: 'Foo'}];
@@ -22,14 +21,14 @@ const noCacheList = list => list.map((item, index) => ({
 const keyMapper = (item, index) => item.image || index;
 
 const columnWidth = 250;
-const defaultHeight = 540;
+const defaultHeight = 700;
 const defaultWidth = columnWidth;
 const defaultSpacer = 30;
 const imageHeight = 380;
 
 // Default sizes help Masonry decide how many images to batch-measure
 const cache = new CellMeasurerCache({
-    defaultHeight,
+    imageHeight,
     defaultWidth,
     fixedWidth: true
 });
@@ -55,20 +54,32 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                 index={index}
                 key={key}
                 parent={parent} >
-            <div style={{...style, ...{border: "2px double grey" }}}>
+            <div style={{...style, ...{border: "2px double grey", height: defaultHeight-211}}}>
         {(
         <img
             src={(console.log('https://image.tmdb.org/t/p/w500'+item.poster), 'https://image.tmdb.org/t/p/w500'+item.poster)}
             alt={'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
             style={{
             height: height,
-                width: columnWidth - 5,
+                width: columnWidth - 4,
                 objectFit: "fill",
                 display: "block"
         }}
             />
         )}
-                <div>{item.title}</div>
+        <div style={{maxHeight: "20px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "10px", paddingRight: "10px", marginTop: "5px", marginBottom: "10px", font: "bold 130% serif", color: "#008080"}}>{item.title}</div>
+                <Container>
+                    <div style={{paddingLeft: "10px", marginBottom: "10px",}}>
+                    <Label size="tiny" as='a' tag>Mail</Label>
+                    <Label size="tiny" as='a' color='red' tag>Next</Label>
+                    <Label size="tiny" as='a' color='teal' tag>Soon</Label>
+                    </div>
+                </Container>
+                <div style={{paddingLeft: "10px", paddingRight: "10px",}}>
+                <Progress color="violet" percent={40} size='small'>
+                    Rating
+                </Progress>
+                </div>
     </div>
         </CellMeasurer>
     );
@@ -80,7 +91,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
     cellMeasurerCache={cache}
     cellPositioner={cellPositioner}
     cellRenderer={cellRenderer}
-    height={defaultHeight * 5 + defaultSpacer * 4}
+    height={2700}
     width={1100}
     keyMapper={keyMapper}
     ref={setRef}
@@ -119,9 +130,6 @@ class Index extends React.Component {
 
     render() {
         return (
-                < Grid  columns={8}>
-                    <Grid.Column/>
-                    < Grid.Column >
                         <ImageMeasurer
                             items={this.state.images}
                             image={item => item.image}
@@ -146,9 +154,6 @@ class Index extends React.Component {
                                 />
                             )}
                         </ImageMeasurer>
-                        < /Grid.Column>
-                        <Grid.Column/>
-                        < /Grid>
                         );
     }
 }
