@@ -4,9 +4,12 @@ import SearchStandard from './SearchFlow';
 import PaginationControlled from './ControledPagination'
 import './index.css'
 import ImageMeasurer from './MasonryProvider';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { doSearch, clearSearch } from './actions/movies';
+import { doSearch } from './actions/movies';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import PopularFilms from './PopularFilms';
+
 
 class MenuAttached extends React.Component {
 
@@ -50,9 +53,7 @@ class MenuAttached extends React.Component {
         id = "minContent"
         className = "minContent" >
 
-            < ImageMeasurer / >
-
-            < PaginationControlled / >
+            <PopularFilms/>
             < /div>
             < /Segment>
             < /div>
@@ -72,7 +73,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     doSearch,
-    clearSearch
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(MenuAttached);

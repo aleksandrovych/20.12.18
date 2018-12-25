@@ -9,6 +9,7 @@ import { createBrowserHistory } from 'history'
 import { routerMiddleware } from 'connected-react-router'
 import ReactDOM from 'react-dom'
 import rootReducer from './reducers'
+import thunkMiddleware from 'redux-thunk'
 
 const history = createBrowserHistory()
 
@@ -17,6 +18,7 @@ const store = createStore(
     rootReducer(history),
     composeEnhancer(
         applyMiddleware(
+            thunkMiddleware,
             routerMiddleware(history),
         ),
     ),
@@ -35,14 +37,11 @@ const render = () => {
 
 render()
 
-// Hot reloading
 if (module.hot) {
-    // Reload components
     module.hot.accept('./App', () => {
         render()
     })
 
-    // Reload reducers
     module.hot.accept('./reducers', () => {
         store.replaceReducer(rootReducer(history))
     })
