@@ -43,11 +43,32 @@ const cellPositionerConfig = {
 
 const cellPositioner = createMasonryCellPositioner(cellPositionerConfig);
 
+const workWithText = (text) => {
+    if (text === undefined) {
+        return ""
+    }
+
+    if (text === "Science Fiction") {
+        return "Sci-Fy";
+    }
+
+    console.log(text.length)
+
+    if (text.length > 5) {
+        return text.slice(0, 5)
+    }
+
+    return text
+}
+
 const MasonryComponent = ({ itemsWithSizes, setRef }) => {
+
+
     const cellRenderer = ({ index, key, parent, style }) => {
         const { item, size } = itemsWithSizes[index];
         const height = imageHeight;
 
+        console.log(item)
         return (
             <CellMeasurer
                 cache={cache}
@@ -70,13 +91,13 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
         <div style={{maxHeight: "20px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "10px", paddingRight: "10px", marginTop: "5px", marginBottom: "10px", font: "bold 130% serif", color: "#008080"}}>{item.title}</div>
                 <Container>
                     <div style={{paddingLeft: "10px", marginBottom: "10px",}}>
-                    <Label size="tiny" as='a' tag>Mail</Label>
-                    <Label size="tiny" as='a' color='red' tag>Next</Label>
-                    <Label size="tiny" as='a' color='teal' tag>Soon</Label>
+                        {  item.genres[0] != undefined && <Label size="tiny" as='a' tag>{workWithText(item.genres[0])}</Label>}
+                        {  item.genres[1] != undefined && <Label size="tiny" as='a' color='red' tag>{workWithText(item.genres[1])}</Label>}
+                        {  item.genres[2] != undefined && <Label size="tiny" as='a' color='teal' tag>{workWithText(item.genres[2])}</Label>}
                     </div>
                 </Container>
                 <div style={{paddingLeft: "10px", paddingRight: "10px",}}>
-                <Progress color="violet" percent={40} size='small'>
+                <Progress color={(item.rating < 3.0 ? "red" : (item.rating < 6.0 ? "yellow" : "green"))} percent={item.rating * 10} size='small'>
                     Rating
                 </Progress>
                 </div>
