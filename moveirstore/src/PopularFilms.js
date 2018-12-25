@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { getPopularMovies } from './actions/movies';
 import ImageMeasurer from "./MasonryProvider";
 import PaginationControlled from "./ControledPagination";
+import {Grid} from "semantic-ui-react/dist/commonjs/collections/Grid";
+import {Pagination} from "semantic-ui-react";
 
 
 class PopularFilms extends Component {
@@ -32,6 +34,8 @@ class PopularFilms extends Component {
         ]
     }
 }
+
+
 
 const mapStateToProps = (state) => {
     return {

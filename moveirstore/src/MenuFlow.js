@@ -7,6 +7,8 @@ import ImageMeasurer from './MasonryProvider';
 import { doSearch } from './actions/movies';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import {Grid} from 'semantic-ui-react'
+
 
 import PopularFilms from './PopularFilms';
 
@@ -16,6 +18,9 @@ class MenuAttached extends React.Component {
     render() {
         let {pathname, searchIsLoading, search} = this.props;
         return (
+            <Grid >
+                    <Grid.Column/>
+                        <Grid.Column>
             < div >
             < Menu
         attached = 'top' >
@@ -56,6 +61,9 @@ class MenuAttached extends React.Component {
                 < /div>
             < /Segment>
                     < /div>
+                    </Grid.Column>
+                    <Grid.Column/>
+                    </Grid>
     )
     }
 }

@@ -7,6 +7,8 @@ import {
     Masonry
 } from "react-virtualized";
 import ImageMeasurer from "react-virtualized-image-measurer";
+//import {Grid} from "./PopularFilms";
+import {Grid} from 'semantic-ui-react'
 
 // Array of images with captions
 //const list = [{image: 'http://...', title: 'Foo'}];
@@ -53,7 +55,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                 index={index}
                 key={key}
                 parent={parent} >
-            <div style={{...style, ...{border: "2px double grey", paddingLeft: "1px", }}}>
+            <div style={{...style, ...{border: "2px double grey" }}}>
         {(
         <img
             src={(console.log('https://image.tmdb.org/t/p/w500'+item.poster), 'https://image.tmdb.org/t/p/w500'+item.poster)}
@@ -117,33 +119,37 @@ class Index extends React.Component {
 
     render() {
         return (
-            <div>
-            <ImageMeasurer
-        items={this.state.images}
-        image={item => item.image}
-        keyMapper={keyMapper}
-        onError={(error, item, src) => {
-            console.error(
-                "Cannot load image",
-                src,
-                "for item",
-                item,
-                "error",
-                error
-            );
-        }}
-        defaultHeight={defaultHeight}
-        defaultWidth={defaultWidth}
-            >
-            {({ itemsWithSizes }) => (
-        <MasonryComponent
-        setRef={this.setMasonry}
-        itemsWithSizes={itemsWithSizes}
-        />
-    )}
-    </ImageMeasurer>
-        </div>
-    );
+                < Grid  columns={8}>
+                    <Grid.Column/>
+                    < Grid.Column >
+                        <ImageMeasurer
+                            items={this.state.images}
+                            image={item => item.image}
+                            keyMapper={keyMapper}
+                            onError={(error, item, src) => {
+                                console.error(
+                                    "Cannot load image",
+                                    src,
+                                    "for item",
+                                    item,
+                                    "error",
+                                    error
+                                );
+                            }}
+                            defaultHeight={defaultHeight}
+                            defaultWidth={defaultWidth}
+                        >
+                            {({ itemsWithSizes }) => (
+                                <MasonryComponent
+                                    setRef={this.setMasonry}
+                                    itemsWithSizes={itemsWithSizes}
+                                />
+                            )}
+                        </ImageMeasurer>
+                        < /Grid.Column>
+                        <Grid.Column/>
+                        < /Grid>
+                        );
     }
 }
 
