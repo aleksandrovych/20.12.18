@@ -4,6 +4,8 @@
 
 #minContent {
   height: 2560px;
+  margin-left: -40px;
+  margin-top: 20px;
 }
 
 .App-link {
