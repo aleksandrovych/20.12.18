@@ -54,7 +54,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                 index={index}
                 key={key}
                 parent={parent} >
-            <div style={{...style, ...{border: "2px double grey", height: defaultHeight-211}}}>
+            <div style={{...style, ...{border: "2px double grey", height: defaultHeight-216}}}>
         {(
         <img
             src={(console.log('https://image.tmdb.org/t/p/w500'+item.poster), 'https://image.tmdb.org/t/p/w500'+item.poster)}
@@ -91,7 +91,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
     cellMeasurerCache={cache}
     cellPositioner={cellPositioner}
     cellRenderer={cellRenderer}
-    height={2700}
+    height={2600}
     width={1100}
     keyMapper={keyMapper}
     ref={setRef}
