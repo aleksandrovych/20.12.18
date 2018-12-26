@@ -52,8 +52,6 @@ const workWithText = (text) => {
         return "Sci-Fy";
     }
 
-    console.log(text.length)
-
     if (text.length > 5) {
         return text.slice(0, 5)
     }
@@ -68,7 +66,6 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
         const { item, size } = itemsWithSizes[index];
         const height = imageHeight;
 
-        console.log(item)
         return (
             <CellMeasurer
                 cache={cache}
@@ -78,7 +75,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
             <div style={{...style, ...{border: "2px double grey", height: defaultHeight-216}}}>
         {(
         <img
-            src={(console.log('https://image.tmdb.org/t/p/w500'+item.poster), 'https://image.tmdb.org/t/p/w500'+item.poster)}
+            src={'https://image.tmdb.org/t/p/w500'+item.poster}
             alt={'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
             style={{
             height: height,

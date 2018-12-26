@@ -10,11 +10,11 @@ import {Pagination} from "semantic-ui-react";
 
 class PopularFilms extends Component {
 
-    onPageChange = (pageNumber) => {
+    onPageChange = (event) => {
 
+        let page = event.target.getAttribute('value')
         let { getPopularMovies } = this.props;
-
-        getPopularMovies(pageNumber);
+        getPopularMovies(page);
     }
 
     componentDidMount() {
