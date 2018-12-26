@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import './App.css';
 import { ConnectedRouter } from 'connected-react-router'
-import routes from './routes';
+import MenuAttached from './MenuFlow'
 
 const App = ({ history }) => {
     return (
         <ConnectedRouter history={history}>
-            { routes }
+            <MenuAttached/>
         </ConnectedRouter>
     )
 }

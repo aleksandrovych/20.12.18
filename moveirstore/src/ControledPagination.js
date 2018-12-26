@@ -2,15 +2,28 @@ import React, {Component} from 'react'
 import {Grid, Pagination} from 'semantic-ui-react'
 
 export default class PaginationControlled extends Component {
-    state = {activePage: 1}
+
+    constructor(props) {
+        super(props)
+
+        this.state = { activePage: 1, onPageChange: () => {}, totalPages: 1};
+    }
+
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+            let res = {...prevState, activePage: nextProps.activePage, onPageChange: nextProps.onPageChange, totalPages: nextProps.totalPages}
+            res.activePage = res.activePage === undefined ? 1 : res.activePage
+            res.onPageChange = res.onPageChange === null ? () => {} : res.onPageChange
+            res.totalPages = res.totalPages ===undefined ? 1 : res.totalPages
+            return res;
+    }
 
     handleInputChange = (e, {value}) => this.setState({activePage: value})
 
     handlePaginationChange = (e, {activePage}) => this.setState({activePage})
 
     render() {
-        const {activePage} = this.state
-        const p = this.props;
+        const p = this.state;
 
         return (
             < Grid padded='vertically'

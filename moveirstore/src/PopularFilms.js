@@ -5,17 +5,29 @@ import { getPopularMovies } from './actions/movies';
 import ImageMeasurer from "./MasonryProvider";
 import PaginationControlled from "./ControledPagination";
 import {Grid} from "semantic-ui-react/dist/commonjs/collections/Grid";
-import {Pagination} from "semantic-ui-react";
-
+import { withRouter } from 'react-router-dom'
 
 class PopularFilms extends Component {
 
     onPageChange = (event) => {
 
-        let page = event.target.getAttribute('value')
-        let { getPopularMovies } = this.props;
-        getPopularMovies(page);
+        try {
+            let page = event.target.getAttribute('value')
+
+            let { getPopularMovies } = this.props;
+            getPopularMovies(page);
+        } catch {
+            console.log('PopularFilms onPageChange')
+        }
     }
+
+    constructor(props) {
+        super(props)
+        console.log('PopularFilms')
+
+    }
+
+
 
     componentDidMount() {
         let { getPopularMovies, activePagePopular } = this.props
@@ -29,8 +41,8 @@ class PopularFilms extends Component {
         const parsed = movies.reduce(reducer, []);
         let pagination = {activePage: activePagePopular, onPageChange: this.onPageChange, totalPages: Math.floor(totalMovies / 20)}
         return [
-            < ImageMeasurer key="ImageMeasurer" list={parsed} / >,
-            < PaginationControlled key="PaginationControlled" {...pagination} / >
+            < ImageMeasurer key="ImageMeasurerPopular" list={parsed} / >,
+            < PaginationControlled key="PaginationControlledPopular" {...pagination} / >
         ]
     }
 }
@@ -50,4 +62,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
     getPopularMovies
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(PopularFilms);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PopularFilms));

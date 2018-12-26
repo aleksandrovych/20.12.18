@@ -65,12 +65,11 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
     const cellRenderer = ({ index, key, parent, style }) => {
         const { item, size } = itemsWithSizes[index];
         const height = imageHeight;
-
         return (
             <CellMeasurer
                 cache={cache}
                 index={index}
-                key={key}
+                key={item.id}
                 parent={parent} >
             <div style={{...style, ...{border: "2px double grey", height: defaultHeight-216}}}>
         {(
@@ -123,17 +122,20 @@ class Index extends React.Component {
         super(props)
 
         this.state = { images: noCacheList(this.props.list)};
+
     }
 
 
+    /*
     static getDerivedStateFromProps(nextProps, prevState) {
+        console.log('prevState: ', prevState)
         if (nextProps.list != prevState.images) {
             return {...prevState, images: nextProps.list}
         }
 
         return null;
     }
-
+    */
     masonryRef = null;
 
     // this shows how to significantly change the input array, if items will be only appended this recalculation is not needed

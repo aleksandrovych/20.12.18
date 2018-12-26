@@ -1,17 +1,21 @@
 import React from 'react'
 import {Dropdown, Icon, Menu, Segment} from 'semantic-ui-react'
 import SearchStandard from './SearchFlow';
-import PaginationControlled from './ControledPagination'
 import './index.css'
-import ImageMeasurer from './MasonryProvider';
 import { doSearch } from './actions/movies';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {Grid} from 'semantic-ui-react'
-
+import routes from './routes';
 
 import PopularFilms from './PopularFilms';
+import LatestFilms from './LatestFilms';
+import Watchlist from './Watchlist';
+import MovieDetail from './MovieDetail';
 
+import { Route, Link, Redirect, Switch } from 'react-router-dom'
+
+import { withRouter } from "react-router";
 
 class MenuAttached extends React.Component {
 
@@ -25,9 +29,15 @@ class MenuAttached extends React.Component {
                     < Menu attached = 'top' >
                         < Dropdown item icon = 'wrench' simple >
                             < Dropdown.Menu >
-                                < Dropdown.Item > Latest < /Dropdown.Item>
-                                < Dropdown.Item > Popular < /Dropdown.Item>
-                                < Dropdown.Item > Watchlist < /Dropdown.Item>
+                                <Link to="/latest/">
+                                    < Dropdown.Item > Latest < /Dropdown.Item>
+                                </Link>
+                                <Link to="/popular/">
+                                    < Dropdown.Item > Popular < /Dropdown.Item>
+                                </Link>
+                                <Link to="/watchlist/">
+                                    < Dropdown.Item > Watchlist < /Dropdown.Item>
+                                </Link>
                             < /Dropdown.Menu>
                         < /Dropdown>
                     < Menu.Menu position = 'right' >
@@ -45,7 +55,7 @@ class MenuAttached extends React.Component {
                         <Grid.Column computer={1} />
                             <Grid.Column computer={14}>
                 < div id="minContent" >
-                                <PopularFilms/>
+                    {routes}
                     < /div>
                             </Grid.Column>
                     <Grid.Column computer={1} />
