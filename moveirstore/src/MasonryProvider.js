@@ -121,12 +121,10 @@ class Index extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = { images: noCacheList(this.props.list)};
+        this.state = {images: noCacheList(this.props.list)};
 
     }
 
-
-    /*
     static getDerivedStateFromProps(nextProps, prevState) {
         console.log('prevState: ', prevState)
         if (nextProps.list != prevState.images) {
@@ -135,7 +133,7 @@ class Index extends React.Component {
 
         return null;
     }
-    */
+
     masonryRef = null;
 
     // this shows how to significantly change the input array, if items will be only appended this recalculation is not needed
