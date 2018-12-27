@@ -121,18 +121,29 @@ class Index extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {images: noCacheList(this.props.list)};
+       // this.state = {images: noCacheList(this.props.list)};
+        // console.log('constructor!: ', this.props.list)
+    }
+
+    componentWillUpdate(nextProps, nextState, nextContext) {
+        //console.log("nextProps.list: ", nextProps.list)
+        cache.clearAll();
+        cellPositioner.reset(cellPositionerConfig);
+        this.masonryRef.clearCellPositions();
+        this.state = {images: noCacheList(nextProps.list)};
+        //console.log('this: ', nextState);
 
     }
 
+    /*
     static getDerivedStateFromProps(nextProps, prevState) {
-        console.log('prevState: ', prevState)
         if (nextProps.list != prevState.images) {
             return {...prevState, images: nextProps.list}
         }
 
         return null;
     }
+    */
 
     masonryRef = null;
 
@@ -149,7 +160,7 @@ class Index extends React.Component {
     render() {
         return (
                         <ImageMeasurer
-                            items={this.state.images}
+                            items={this.props.list}
                             image={item => item.image}
                             keyMapper={keyMapper}
                             onError={(error, item, src) => {
@@ -165,7 +176,7 @@ class Index extends React.Component {
                             defaultHeight={defaultHeight}
                             defaultWidth={defaultWidth}
                         >
-                            {({ itemsWithSizes }) => (
+                            {({ itemsWithSizes, sizes }) => (
                                 <MasonryComponent
                                     setRef={this.setMasonry}
                                     itemsWithSizes={itemsWithSizes}

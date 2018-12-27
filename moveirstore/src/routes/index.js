@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router'
+import { Route, Switch, Redirect } from 'react-router'
 import LatestFilms from "../LatestFilms";
 import PopularFilms from "../PopularFilms";
 import Watchlist from "../Watchlist";
@@ -8,7 +8,8 @@ import MovieDetail from "../MovieDetail";
 const routes = (
     <div>
         <Switch>
-            <Route  path="/latest/" component={LatestFilms} />
+            <Redirect exact from="/" to="/latest/"/>
+            <Route  path="/latest/"  component={LatestFilms} />
             <Route  path="/popular/" component={PopularFilms} />
             <Route  path="/watchlist/" component={Watchlist} />
             <Route  path='/movie/:movieId' component={MovieDetail}/>
