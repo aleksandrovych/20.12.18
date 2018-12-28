@@ -9,6 +9,8 @@ import {
 import ImageMeasurer from "react-virtualized-image-measurer";
 import {Grid, Label, Icon, Container, Progress} from 'semantic-ui-react'
 
+import {Link} from 'react-router-dom'
+
 // Array of images with captions
 //const list = [{image: 'http://...', title: 'Foo'}];
 
@@ -72,7 +74,9 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                 key={item.id}
                 parent={parent} >
             <div style={{...style, ...{border: "2px double grey", height: defaultHeight-216}}}>
-        {(
+                <Link to={"/movie/"+item.id} /*target={type === 'search'? '_blank' : null}*/>
+
+                {(
         <img
             src={'https://image.tmdb.org/t/p/w500'+item.poster}
             alt={'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
@@ -84,6 +88,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
         }}
             />
         )}
+
         <div style={{maxHeight: "20px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "10px", paddingRight: "10px", marginTop: "5px", marginBottom: "10px", font: "bold 130% serif", color: "#008080"}}>{item.title}</div>
                 <Container>
                     <div style={{paddingLeft: "10px", marginBottom: "10px",}}>
@@ -97,6 +102,8 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
                     Rating
                 </Progress>
                 </div>
+                </Link>
+
     </div>
         </CellMeasurer>
     );
@@ -118,11 +125,26 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
 
 class Index extends React.Component {
 
+    masonryRef = null;
+
     constructor(props) {
         super(props)
 
        // this.state = {images: noCacheList(this.props.list)};
         // console.log('constructor!: ', this.props.list)
+        console.log('props.list: ', props.list)
+
+        if (props.list != null && props.list.length > 0) {
+            cache.clearAll();
+            cellPositioner.reset(cellPositionerConfig);
+
+            if (this.masonryRef != null) {
+                this.masonryRef.clearCellPositions();
+
+            }
+
+            this.state = {images: noCacheList(props.list)};
+        }
     }
 
     componentWillUpdate(nextProps, nextState, nextContext) {
@@ -145,7 +167,7 @@ class Index extends React.Component {
     }
     */
 
-    masonryRef = null;
+
 
     // this shows how to significantly change the input array, if items will be only appended this recalculation is not needed
     shorten = () => {

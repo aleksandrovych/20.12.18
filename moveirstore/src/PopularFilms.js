@@ -23,7 +23,6 @@ class PopularFilms extends Component {
 
     constructor(props) {
         super(props)
-        console.log('PopularFilms')
 
     }
 
