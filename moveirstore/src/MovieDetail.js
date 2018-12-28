@@ -64,7 +64,7 @@ class MovieDetail extends Component {
                     <Progress style={{"progress": {backgroundColor: "red",}}}
                         active
                         indicating
-                        percent={rating100}
+                        percent={100}
                         size='small'
                         color='olive'
                         as='div'

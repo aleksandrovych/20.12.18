@@ -21,12 +21,6 @@ class PopularFilms extends Component {
         }
     }
 
-    constructor(props) {
-        super(props)
-
-    }
-
-
 
     componentDidMount() {
         let { getPopularMovies, activePagePopular } = this.props

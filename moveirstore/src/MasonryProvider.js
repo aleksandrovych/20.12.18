@@ -78,8 +78,8 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
 
                 {(
         <img
-            src={'https://image.tmdb.org/t/p/w500'+item.poster}
-            alt={'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
+            src={item !== null && item.poster !== null  ? 'https://image.tmdb.org/t/p/w500'+item.poster : 'https://cdn.sstatic.net/Sites/stackoverflow/img/404.svg'}
+            alt={'No films'}
             style={{
             height: height,
                 width: columnWidth - 4,
