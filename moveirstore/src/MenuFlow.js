@@ -34,10 +34,7 @@ class MenuAttached extends React.Component {
                             < /Dropdown.Menu>
                         < /Dropdown>
                     < Menu.Menu position = 'right' >
-                        < div className = 'ui right aligned category search item' >
-                                < SearchStandard / >
-                                < div className = 'results' / >
-                                < /div>
+                        {pathname.indexOf('/movie/') === -1 && < div className = 'ui right aligned category search item' >< SearchStandard / >< div className = 'results' / >< /div>}
                                 < /Menu.Menu>
                                 < /Menu>
             < Segment key='seg' attached = 'bottom' >

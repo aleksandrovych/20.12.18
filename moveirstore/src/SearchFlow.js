@@ -35,7 +35,10 @@ class SearchStandard extends Component {
 
     handleResultSelect = (e, {result}) => {
 
+        let {clearSearch} = this.props;
         this.setState({value: result.title});
+        this.resetComponent();
+        clearSearch()
         store.dispatch(push('/movie/'+result.id+'/'))
     }
 
