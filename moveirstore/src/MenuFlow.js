@@ -8,14 +8,7 @@ import { connect } from 'react-redux'
 import {Grid} from 'semantic-ui-react'
 import routes from './routes';
 
-import PopularFilms from './PopularFilms';
-import LatestFilms from './LatestFilms';
-import Watchlist from './Watchlist';
-import MovieDetail from './MovieDetail';
-
 import { Route, Link, Redirect, Switch } from 'react-router-dom'
-
-import { withRouter } from "react-router";
 
 class MenuAttached extends React.Component {
 
@@ -30,21 +23,19 @@ class MenuAttached extends React.Component {
                         < Dropdown item icon = 'wrench' simple >
                             < Dropdown.Menu >
                                 <Link to="/latest/">
-                                    < Dropdown.Item > Latest < /Dropdown.Item>
+                                    < Dropdown.Item active={pathname === '/latest/'}> Latest < /Dropdown.Item>
                                 </Link>
                                 <Link to="/popular/">
-                                    < Dropdown.Item > Popular < /Dropdown.Item>
+                                    < Dropdown.Item active={pathname === '/popular/'}> Popular < /Dropdown.Item>
                                 </Link>
                                 <Link to="/watchlist/">
-                                    < Dropdown.Item > Watchlist < /Dropdown.Item>
+                                    < Dropdown.Item active={pathname === '/watchlist/'}> Watchlist < /Dropdown.Item>
                                 </Link>
                             < /Dropdown.Menu>
                         < /Dropdown>
                     < Menu.Menu position = 'right' >
                         < div className = 'ui right aligned category search item' >
-                            < div className = 'ui transparent icon input' >
                                 < SearchStandard / >
-                            < /div>
                                 < div className = 'results' / >
                                 < /div>
                                 < /Menu.Menu>

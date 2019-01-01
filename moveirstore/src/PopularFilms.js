@@ -17,7 +17,6 @@ class PopularFilms extends Component {
             let { getPopularMovies } = this.props;
             getPopularMovies(page);
         } catch {
-            console.log('PopularFilms onPageChange')
         }
     }
 

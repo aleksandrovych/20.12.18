@@ -88,12 +88,11 @@ export function doSearch(query) {
     .then(axios.spread(function (genres, search) {
       
       search.data.results.forEach(element => {
-
         let genresTitles = genres.data.genres.map((genre, index) => {
           return element.genre_ids.includes(genre.id) ? genre.name : null;
         }).filter(genre => genre != null);
 
-        movies.push({'id':element.id, 'title' : element.title, 'rating': element.vote_average, 'genres': genresTitles}); 
+        movies.push({'id':element.id, 'title' : element.title, 'rating': element.vote_average, 'genres': genresTitles, src: element.poster_path, desc: element.overview});
       });
 
       let result = movies.map((movie, index) => {
