@@ -11,7 +11,9 @@ import ReactDOM from 'react-dom'
 import rootReducer from './reducers'
 import thunkMiddleware from 'redux-thunk'
 
-const history = createBrowserHistory()
+const history = createBrowserHistory({
+    basename: process.env.PUBLIC_URL,
+});
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 export const store = createStore(

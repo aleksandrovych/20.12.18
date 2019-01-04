@@ -6,7 +6,7 @@ import MenuAttached from './MenuFlow'
 
 const App = ({ history }) => {
     return (
-        <ConnectedRouter history={history} basename={process.env.PUBLIC_URL}>
+        <ConnectedRouter history={history}>
             <MenuAttached/>
         </ConnectedRouter>
     )
