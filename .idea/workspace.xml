@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d105e453-daac-4b03-8267-9bb9e2185242" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/precache-manifest.0e6cf408b082f35aee6191b007bbebd3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/css/main.553d61e8.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/css/main.553d61e8.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/js/main.9720ad98.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/js/main.9720ad98.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/js/runtime~main.229c360f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/js/runtime~main.229c360f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveirstore/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="d105e453-daac-4b03-8267-9bb9e2185242" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -28,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+            <state relative-caret-position="564">
+              <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -37,13 +25,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moveirstore/src/PopularFilms.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/moveirstore/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="28" column="5" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moveirstore/src/Watchlist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="255">
               <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -73,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moveirstore/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="315">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -85,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="705">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -144,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alt</find>
       <find>setState</find>
       <find>onInputChange</find>
       <find>searchInput</find>
@@ -174,6 +161,7 @@
       <find>createMasonryCellPositioner</find>
       <find>reset</find>
       <find>cellPositionerConf</find>
+      <find>console.</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/moveirstore/node_modules/react-virtualized/dist/commonjs</dir>
@@ -196,18 +184,18 @@
         <option value="$PROJECT_DIR$/moveirstore/src/routers/index.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/reducers/reducer.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/App.css" />
-        <option value="$PROJECT_DIR$/moveirstore/src/App.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/ControledPagination.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/MovieDetail.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/actions/movies.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/index.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/SearchFlow.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/routes/index.js" />
-        <option value="$PROJECT_DIR$/moveirstore/src/MenuFlow.js" />
-        <option value="$PROJECT_DIR$/moveirstore/src/MasonryProvider.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/LatestFilms.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/PopularFilms.js" />
         <option value="$PROJECT_DIR$/moveirstore/src/Watchlist.js" />
+        <option value="$PROJECT_DIR$/moveirstore/src/MasonryProvider.js" />
+        <option value="$PROJECT_DIR$/moveirstore/src/MenuFlow.js" />
+        <option value="$PROJECT_DIR$/moveirstore/src/App.js" />
       </list>
     </option>
   </component>
@@ -239,20 +227,6 @@
               <item name="20.12.18" type="462c0819:PsiDirectoryNode" />
               <item name="moveirstore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="20.12.18" type="b2602c69:ProjectViewProjectNode" />
-              <item name="20.12.18" type="462c0819:PsiDirectoryNode" />
-              <item name="moveirstore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="20.12.18" type="b2602c69:ProjectViewProjectNode" />
-              <item name="20.12.18" type="462c0819:PsiDirectoryNode" />
-              <item name="moveirstore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,11 +276,12 @@
       <workItem from="1546365044271" duration="9816000" />
       <workItem from="1546585771312" duration="5003000" />
       <workItem from="1546594976691" duration="5000" />
+      <workItem from="1546598411752" duration="764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95696000" />
+    <option name="totallyTimeSpent" value="96460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="779" extended-state="0" />
@@ -594,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/moveirstore/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -618,16 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="18" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,12 +606,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/Watchlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="255">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -692,20 +647,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/src/Watchlist.js">
+    <entry file="file://$PROJECT_DIR$/moveirstore/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="315">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moveirstore/package.json">
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moveirstore/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

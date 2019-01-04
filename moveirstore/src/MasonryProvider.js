@@ -45,7 +45,6 @@ const createCellPositionerConfig = width => {
 }
 
 const createMasonryCellPositionerProxy = (width) => {
-    console.log('width1: ', width)
     return createMasonryCellPositioner(createCellPositionerConfig(width))
 }
 
