@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { removeFromWatchlist } from './actions/watchlist';
 import ImageMeasurer from "./MasonryProvider";
 import { withRouter } from 'react-router-dom'
+import ReactResizeDetector from 'react-resize-detector';
 
 
 class Watchlist extends Component {
@@ -11,6 +12,17 @@ class Watchlist extends Component {
 
         let { dispatch } = this.props;
         return dispatch(removeFromWatchlist(movie));
+    }
+
+    constructor(props) {
+        super(props)
+
+        this.state = {width: 0}
+    }
+
+    calculateLayout = width => {
+
+        this.setState({width: width})
     }
 
     render() {
@@ -26,7 +38,9 @@ class Watchlist extends Component {
         const parsed = result.reduce(reducer, []);
 
         return (
-            < ImageMeasurer key="ImageMeasurerPopular" list={parsed} / >
+            <ReactResizeDetector handleWidth onResize={this.calculateLayout}>
+            < ImageMeasurer width={this.state.width} key="ImageMeasurerPopular" list={parsed} / >
+            </ReactResizeDetector>
         );
     }
 }

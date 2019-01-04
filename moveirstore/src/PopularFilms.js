@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -6,6 +7,7 @@ import ImageMeasurer from "./MasonryProvider";
 import PaginationControlled from "./ControledPagination";
 import {Grid} from "semantic-ui-react/dist/commonjs/collections/Grid";
 import { withRouter } from 'react-router-dom'
+import ReactResizeDetector from 'react-resize-detector';
 
 class PopularFilms extends Component {
 
@@ -20,11 +22,23 @@ class PopularFilms extends Component {
         }
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {width: 0}
+    }
+
 
     componentDidMount() {
         let { getPopularMovies, activePagePopular } = this.props
         getPopularMovies(activePagePopular);
     }
+
+    calculateLayout = width => {
+
+        this.setState({width: width})
+    }
+
 
     render() {
         let {moviesAreLoading, movies, totalMovies, activePagePopular} = this.props
@@ -33,7 +47,9 @@ class PopularFilms extends Component {
         const parsed = movies.reduce(reducer, []);
         let pagination = {activePage: activePagePopular, onPageChange: this.onPageChange, totalPages: Math.floor(totalMovies / 20)}
         return [
-            < ImageMeasurer key="ImageMeasurerPopular" list={parsed} / >,
+            <ReactResizeDetector handleWidth onResize={this.calculateLayout}>
+                < ImageMeasurer width={this.state.width} key="ImageMeasurerPopular" list={parsed} / >
+                </ReactResizeDetector>,
             < PaginationControlled key="PaginationControlledPopular" {...pagination} / >
         ]
     }

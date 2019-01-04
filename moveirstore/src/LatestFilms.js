@@ -5,6 +5,7 @@ import { getLatestMovies } from './actions/movies';
 import PaginationControlled from "./ControledPagination";
 import ImageMeasurer from "./MasonryProvider";
 import { withRouter } from 'react-router-dom'
+import ReactResizeDetector from 'react-resize-detector';
 
 class LatestFilms extends Component {
 
@@ -12,7 +13,7 @@ class LatestFilms extends Component {
         super(props)
 
         this.onPageChange = this.onPageChange.bind(this);
-        console.log('LatestFilms')
+        this.state = {width: 0}
     }
 
     onPageChange(event) {
@@ -24,7 +25,7 @@ class LatestFilms extends Component {
             let {getLatestMovies} = this.props;
             getLatestMovies(page);
         } catch {
-            console.log('LatestFilms onPageChange')
+            console.error('LatestFilms onPageChange')
         }
     }
 
@@ -35,6 +36,11 @@ class LatestFilms extends Component {
 
     }
 
+    calculateLayout = width => {
+
+        this.setState({width: width})
+    }
+
     render() {
         let {moviesAreLoading, movies, totalMovies, activePagePopular} = this.props
 
@@ -42,7 +48,9 @@ class LatestFilms extends Component {
         const parsed = movies.reduce(reducer, []);
         let pagination = {activePage: activePagePopular, onPageChange: this.onPageChange, totalPages: Math.floor(totalMovies / 20)}
         return [
-            < ImageMeasurer key="ImageMeasurerLatest" list={parsed} / >,
+            <ReactResizeDetector handleWidth onResize={this.calculateLayout}>
+            < ImageMeasurer width={this.state.width} key="ImageMeasurerLatest" list={parsed} / >
+            </ReactResizeDetector>,
             < PaginationControlled key="PaginationControlledLatest" {...pagination} / >
     ]
     }

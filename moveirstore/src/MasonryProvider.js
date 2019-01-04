@@ -35,15 +35,19 @@ const cache = new CellMeasurerCache({
     fixedWidth: true
 });
 
-// Our masonry layout will use 3 columns with a 10px gutter between
-const cellPositionerConfig = {
-    cellMeasurerCache: cache,
-    columnCount: 4,
-    columnWidth,
-    spacer: defaultSpacer
-};
+const createCellPositionerConfig = width => {
+    return {
+        cellMeasurerCache: cache,
+        columnCount: width < 1055 ? (width < 771 ? (width < 492 ? 1 : 2) : 3) : 4,
+        columnWidth,
+        spacer: defaultSpacer
+    }
+}
 
-const cellPositioner = createMasonryCellPositioner(cellPositionerConfig);
+const createMasonryCellPositionerProxy = (width) => {
+    console.log('width1: ', width)
+    return createMasonryCellPositioner(createCellPositionerConfig(width))
+}
 
 const workWithText = (text) => {
     if (text === undefined) {
@@ -61,7 +65,9 @@ const workWithText = (text) => {
     return text
 }
 
-const MasonryComponent = ({ itemsWithSizes, setRef }) => {
+const MasonryComponent = ({ itemsWithSizes, setRef, width }) => {
+
+    const cellPositioner = createMasonryCellPositionerProxy(width);
 
 
     const cellRenderer = ({ index, key, parent, style }) => {
@@ -116,7 +122,7 @@ const MasonryComponent = ({ itemsWithSizes, setRef }) => {
     cellPositioner={cellPositioner}
     cellRenderer={cellRenderer}
     height={2600}
-    width={1100}
+    width={width+50}
     keyMapper={keyMapper}
     ref={setRef}
     />
@@ -130,13 +136,9 @@ class Index extends React.Component {
     constructor(props) {
         super(props)
 
-       // this.state = {images: noCacheList(this.props.list)};
-        // console.log('constructor!: ', this.props.list)
-        console.log('props.list: ', props.list)
-
         if (props.list != null && props.list.length > 0) {
             cache.clearAll();
-            cellPositioner.reset(cellPositionerConfig);
+           // cellPositioner.reset(cellPositionerConfig);
 
             if (this.masonryRef != null) {
                 this.masonryRef.clearCellPositions();
@@ -148,34 +150,12 @@ class Index extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState, nextContext) {
-        //console.log("nextProps.list: ", nextProps.list)
         cache.clearAll();
-        cellPositioner.reset(cellPositionerConfig);
+       // cellPositioner.reset(cellPositionerConfig);
         this.masonryRef.clearCellPositions();
         this.state = {images: noCacheList(nextProps.list)};
-        //console.log('this: ', nextState);
-
     }
 
-    /*
-    static getDerivedStateFromProps(nextProps, prevState) {
-        if (nextProps.list != prevState.images) {
-            return {...prevState, images: nextProps.list}
-        }
-
-        return null;
-    }
-    */
-
-
-
-    // this shows how to significantly change the input array, if items will be only appended this recalculation is not needed
-    shorten = () => {
-        cache.clearAll();
-        cellPositioner.reset(cellPositionerConfig);
-        this.masonryRef.clearCellPositions();
-        this.setState({ images: [...this.state.images.slice(1)] });
-    };
 
     setMasonry = node => (this.masonryRef = node);
 
@@ -200,6 +180,7 @@ class Index extends React.Component {
                         >
                             {({ itemsWithSizes, sizes }) => (
                                 <MasonryComponent
+                                    width={this.props.width}
                                     setRef={this.setMasonry}
                                     itemsWithSizes={itemsWithSizes}
                                 />
