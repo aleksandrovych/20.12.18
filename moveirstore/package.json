@@ -1,5 +1,5 @@
 {
-    "homepage": "https://aleksandrovych.github.io/20.12.18",
+  "homepage": "https://aleksandrovych.github.io/20.12.18",
   "name": "moveirstore",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "connected-react-router": "^6.0.0",
     "faker": "^4.1.0",
+    "gh-pages": "^2.0.1",
     "immutable": "^4.0.0-rc.12",
     "javascript-detect-element-resize": "^0.5.3",
     "react": "^16.7.0",
@@ -25,6 +26,8 @@
     "uikit-react": "^3.0.18"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
