@@ -100,7 +100,6 @@ const MasonryComponent = ({ itemsWithSizes, setRef, width }) => {
                         {  item.genres[0] != undefined && <Label size="tiny" as='a' tag>{workWithText(item.genres[0])}</Label>}
                         {  item.genres[1] != undefined && <Label size="tiny" as='a' color='red' tag>{workWithText(item.genres[1])}</Label>}
                         {  item.genres[2] != undefined && <Label size="tiny" as='a' color='teal' tag>{workWithText(item.genres[2])}</Label>}
-                        {  item.genres[2] != undefined && <Label size="tiny" as='a' color='teal' tag>{workWithText(item.genres[2])}</Label>}
                     </div>
                 </Container>
                 <div style={{paddingLeft: "10px", paddingRight: "10px",}}>

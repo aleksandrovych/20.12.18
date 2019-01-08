@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d105e453-daac-4b03-8267-9bb9e2185242" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveirstore/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveirstore/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveirstore/build/precache-manifest.2b4930c268bc1872dcc1870b555ed645.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveirstore/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/moveirstore/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/js/main.4d9c4a8a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveirstore/build/static/js/main.4d9c4a8a.chunk.js.map" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
-              <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -111,8 +116,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="98" column="111" selection-start-line="98" selection-start-column="111" selection-end-line="98" selection-end-column="111" />
+            <state relative-caret-position="397">
+              <caret line="101" column="91" lean-forward="true" selection-start-line="101" selection-start-column="91" selection-end-line="101" selection-end-column="91" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -276,12 +281,12 @@
       <workItem from="1546585771312" duration="5003000" />
       <workItem from="1546594976691" duration="5000" />
       <workItem from="1546598411752" duration="922000" />
-      <workItem from="1546941772154" duration="463000" />
+      <workItem from="1546941772154" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97286000" />
+    <option name="totallyTimeSpent" value="97483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="779" extended-state="0" />
@@ -600,7 +605,7 @@
     <entry file="file://$PROJECT_DIR$/moveirstore/src/MenuFlow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -674,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moveirstore/src/MasonryProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="98" column="111" selection-start-line="98" selection-start-column="111" selection-end-line="98" selection-end-column="111" />
+        <state relative-caret-position="397">
+          <caret line="101" column="91" lean-forward="true" selection-start-line="101" selection-start-column="91" selection-end-line="101" selection-end-column="91" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
