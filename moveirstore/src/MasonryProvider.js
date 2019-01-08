@@ -96,9 +96,10 @@ const MasonryComponent = ({ itemsWithSizes, setRef, width }) => {
 
         <div style={{maxHeight: "20px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "10px", paddingRight: "10px", marginTop: "5px", marginBottom: "10px", font: "bold 130% serif", color: "#008080"}}>{item.title}</div>
                 <Container>
-                    <div style={{paddingLeft: "10px", marginBottom: "10px",}}>
+                    <div style={{paddingLeft: "10px", marginBottom: "10px", overflowX: "scroll", maxHeight: "21px",}}>
                         {  item.genres[0] != undefined && <Label size="tiny" as='a' tag>{workWithText(item.genres[0])}</Label>}
                         {  item.genres[1] != undefined && <Label size="tiny" as='a' color='red' tag>{workWithText(item.genres[1])}</Label>}
+                        {  item.genres[2] != undefined && <Label size="tiny" as='a' color='teal' tag>{workWithText(item.genres[2])}</Label>}
                         {  item.genres[2] != undefined && <Label size="tiny" as='a' color='teal' tag>{workWithText(item.genres[2])}</Label>}
                     </div>
                 </Container>
